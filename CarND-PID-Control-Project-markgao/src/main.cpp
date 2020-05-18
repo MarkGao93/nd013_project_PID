@@ -116,10 +116,12 @@ int main()
                     steer_value = pid.TotalError();
 
                     // DEBUG
-                    std::cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
+                    cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
                               << "CTE: " << cte
                               << "\nSteering Value: " << steer_value
-                              << std::endl;
+                              << endl;
+//                    cout<<"!!! "<<j[1]['x'].get<string>()<<endl;
+//                    cout<<"!!! "<<j[1]['y'].get<string>()<<endl;
 
                     json msgJson;
                     msgJson["steering_angle"] = steer_value;
@@ -162,7 +164,7 @@ int main()
     }
     else
     {
-        std::cerr << "Failed to listen to port" << std::endl;
+        std::cerr<<"Failed to listen to port"<<endl;
         return -1;
     }
   
